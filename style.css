@@ -1,0 +1,6 @@
+<style>
+    :where([class^="ri-"])::before { content: "\f3c2"; }
+    .nav-link.active { color: #4F46E5; }
+    .service-card:hover { transform: translateY(-8px); }
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+</style>
