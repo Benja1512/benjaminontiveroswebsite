@@ -1,0 +1,21 @@
+
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .project-grid {
+          column-count: 3;
+          column-gap: 1.5rem;
+      }
+      @media (max-width: 1024px) {
+          .project-grid {
+              column-count: 2;
+          }
+      }
+      @media (max-width: 640px) {
+          .project-grid {
+              column-count: 1;
+          }
+      }
+      .project-card {
+          break-inside: avoid;
+          margin-bottom: 1.5rem;
+      }
+  

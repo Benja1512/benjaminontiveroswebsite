@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .loading-tips {
+            animation: fadeIn 0.5s ease-out;
+        }
+        .progress-bar {
+            transition: width 0.3s ease-in-out;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#a5b4fc'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50 flex items-center justify-center p-4">
+
+    <div class="w-full max-w-md text-center">
+        <!-- Logo arriba del círculo -->
+        <div class="mb-4">
+            <img src="./pictures/logo_ben-removebg-preview (1).png" class="h-12 mx-auto" alt="Logo">
+        </div>
+
+        <div class="relative mb-8 flex items-center justify-center">
+            <!-- Círculo de carga giratorio -->
+            <div class="w-24 h-24 border-4 border-secondary border-t-primary rounded-full animate-spin"></div>
+
+            <!-- Porcentaje de carga -->
+            <div class="absolute text-xl font-semibold text-primary loading-percentage">
+                0%
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div class="progress-bar h-full bg-primary rounded-full w-0"></div>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <p class="text-lg font-medium text-gray-800 loading-status">Loading...</p>
+            <p class="text-sm text-gray-600 loading-tips">Getting things ready for you....</p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        const loadingTips = [
+            "Loading resources...",
+            "Configuring settings...",
+            "Optimizing performance...",
+            "Almost there...",
+            "Finalizing setup...",
+             "Getting things ready for you...."
+
+        ];
+
+        let currentTip = 0;
+        let progress = 0;
+        const progressBar = document.querySelector('.progress-bar');
+        const loadingPercentage = document.querySelector('.loading-percentage');
+        const loadingStatus = document.querySelector('.loading-status');
+        const loadingTipsElement = document.querySelector('.loading-tips');
+        function updateTip() {
+            loadingTipsElement.style.opacity = 0;
+            setTimeout(() => {
+                loadingTipsElement.textContent = loadingTips[currentTip];
+                loadingTipsElement.style.opacity = 1;
+                currentTip = (currentTip + 1) % loadingTips.length;
+            }, 500);
+        }
+
+        function updateProgress() {
+            if (progress < 100) {
+                progress += Math.random() * 47;
+                if (progress > 100) progress = 100;
+                
+                progressBar.style.width = `${progress}%`;
+                loadingPercentage.textContent = `${Math.round(progress)}%`;
+                
+                if (progress === 100) {
+                    loadingStatus.textContent = "Complete!";
+                    setTimeout(() => {
+                        window.location.href = "./index.html";
+                    }, 1000);
+                } else {
+                    setTimeout(updateProgress, Math.random() * 600 + 500);
+                }
+            }
+        }
+
+        setInterval(updateTip, 3000);
+        setTimeout(updateProgress, 1000);
+    </script>
+</body>
+</html>
