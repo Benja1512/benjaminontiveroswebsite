@@ -2,38 +2,53 @@
               
                   const projects = [
                     {
-                      title: "E-commerce Platform",
+                      title: "Stock Market Dashboard",
                       description:
-                        "A full-featured online shopping platform with real-time inventory management, user authentication, and payment processing. Built with React and Node.js, this platform handles thousands of daily transactions.",
+                        "A real-time dashboard for tracking stock prices, market trends, and investment insights.",
                       image:
                         "https://public.readdy.ai/ai/img_res/3262b25b14ad3920dffa9dc3ac6ebe99.jpg",
                       tags: ["React", "Node.js", "MongoDB"],
-                      demo: "#",
+                      demo: "/portafolio/portafolio.html",
                       code: "#",
                       category: "web",
                     },
                     {
-                      title: "Fitness Tracking App",
+                      title: "Warehouse Management System",
                       description:
-                        "Mobile application for tracking workouts and maintaining health goals. Features include workout planning, progress tracking, and social sharing capabilities.",
+                        "A warehouse management system for tracking inventory, shipments, and order fulfillment. Features barcode scanning, automated alerts, and data analytics.",
                       image:
                         "https://public.readdy.ai/ai/img_res/8468ac88091807e440cc622cd325522b.jpg",
                       tags: ["Flutter", "Firebase", "Swift"],
-                      demo: "#",
+                      demo: "/portafolio/portafolio2.html",
                       code: "#",
-                      category: "mobile",
-                    },
+                      category: "supply chain",
+                    },                    
                     {
-                      title: "Analytics Dashboard",
+                      title: "TourPeruTravellers",
                       description:
-                        "Interactive dashboard for visualizing business metrics and KPIs. Built with Vue.js and D3.js, featuring real-time data updates and customizable widgets.",
+                        "An advanced system for optimizing travel experiences, showcasing Peru’s breathtaking routes, cultural destinations, and adventure tours.",        
                       image:
                         "https://public.readdy.ai/ai/img_res/01bf704dfe974b7650d44b4ce29ae578.jpg",
                       tags: ["Vue.js", "D3.js", "GraphQL"],
-                      demo: "#",
+                      demo: "portafolio/portafolio4.html",
                       code: "#",
-                      category: "design",
+                      category: "web",
                     },
+                    {
+                      title: "SmartPack - AI-Powered Warehouse & Logistics App",
+                      description:
+                        "A mobile app for tracking fitness goals and workouts. Includes real-time activity tracking, social sharing, and personalized workout plans.",
+                      image:
+                        "https://public.readdy.ai/ai/img_res/01bf704dfe974b7650d44b4ce29ae578.jpg",
+                      tags: ["Vue.js", "D3.js", "GraphQL"],
+                      demo: "portafolio/portafolio3.html",
+                      code: "#",
+                      category: "mobile",
+                    },
+
+
+
+                    
                   ];
             
                   document.addEventListener("DOMContentLoaded", () => {

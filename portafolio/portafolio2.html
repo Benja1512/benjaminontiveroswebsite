@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio de Proyecto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+
+    <link rel="stylesheet" href="/css/portafolio.css">
+    <script src="js/portafolio.js"></script>
+    <script src="/js/portafolio2.js"></script>
+
+
+
+  </head>
+
+
+
+
+  <body class="bg-gray-50">
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <span class="text-2xl font-['Pacifico'] text-primary">logo</span>
+          </div>
+          <div class="flex items-center space-x-8">
+            <a href="#vision" class="text-gray-700 hover:text-primary"
+              >Visión General</a
+            >
+            <a href="#tech" class="text-gray-700 hover:text-primary"
+              >Tecnologías</a
+            >
+            <a href="#demo" class="text-gray-700 hover:text-primary"
+              >Demostración</a
+            >
+            <a href="#results" class="text-gray-700 hover:text-primary"
+              >Resultados</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-16">
+      <section class="relative h-[600px] overflow-hidden">
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          style="background-image: url('https://public.readdy.ai/ai/img_res/6062f9cda5ff281ddbfc521dfa8aa4bf.jpg')"
+        ></div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative max-w-7xl mx-auto px-4 h-full flex items-center">
+          <div class="text-white">
+            <h1 class="text-5xl font-bold mb-6">
+              Sistema de Gestión Inteligente
+            </h1>
+            <p class="text-xl mb-8">
+              Transformando la gestión empresarial con tecnología avanzada e
+              innovación
+            </p>
+            <button
+              class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 cursor-pointer"
+            >
+              Ver Demostración
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="vision" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-16">Visión General</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-2xl font-semibold mb-4">Solución Innovadora</h3>
+              <p class="text-gray-600 mb-6">
+                Nuestro sistema revoluciona la forma en que las empresas
+                gestionan sus operaciones diarias, proporcionando una plataforma
+                unificada para la automatización de procesos y la toma de
+                decisiones basada en datos.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full"
+                  >Cloud Native</span
+                >
+                <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full"
+                  >Machine Learning</span
+                >
+                <span
+                  class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full"
+                  >Big Data</span
+                >
+              </div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="https://public.readdy.ai/ai/img_res/9918385ffad1fc77c82968b2b9a80907.jpg"
+                alt="Dashboard"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-16">
+            Tecnologías Utilizadas
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-lg mb-4"
+              >
+                <i class="ri-cloud-line text-2xl text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Infraestructura Cloud</h3>
+              <p class="text-gray-600">
+                Arquitectura escalable y resiliente basada en microservicios,
+                desplegada en la nube para máxima disponibilidad.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-lg mb-4"
+              >
+                <i class="ri-database-2-line text-2xl text-green-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Procesamiento de Datos</h3>
+              <p class="text-gray-600">
+                Análisis en tiempo real de grandes volúmenes de datos para
+                obtener insights valiosos.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-lg shadow-sm">
+              <div
+                class="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-lg mb-4"
+              >
+                <i class="ri-shield-check-line text-2xl text-purple-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-4">Seguridad Avanzada</h3>
+              <p class="text-gray-600">
+                Protección de datos de última generación con encriptación
+                end-to-end y autenticación multifactor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-16">Demostración</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Gestión de Proyectos</h3>
+                <p class="text-gray-600">
+                  Seguimiento en tiempo real del progreso y recursos de los
+                  proyectos.
+                </p>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Análisis Predictivo</h3>
+                <p class="text-gray-600">
+                  Predicciones precisas basadas en históricos y tendencias
+                  actuales.
+                </p>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4">Automatización</h3>
+                <p class="text-gray-600">
+                  Flujos de trabajo automatizados para mayor eficiencia
+                  operativa.
+                </p>
+              </div>
+            </div>
+            <div class="rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="https://public.readdy.ai/ai/img_res/0664027a2aef188aa430bf88add7f754.jpg"
+                alt="Features"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-16">
+            Resultados y Métricas
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div
+              id="metricsChart"
+              class="h-[400px] bg-white rounded-lg shadow-sm"
+            ></div>
+            <div class="space-y-6">
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-4">
+                  <h3 class="text-xl font-semibold">Eficiencia Operativa</h3>
+                  <span class="text-2xl text-green-600">+45%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-green-600 h-2 rounded-full"
+                    style="width: 45%"
+                  ></div>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-4">
+                  <h3 class="text-xl font-semibold">
+                    Satisfacción del Cliente
+                  </h3>
+                  <span class="text-2xl text-blue-600">92%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-blue-600 h-2 rounded-full"
+                    style="width: 92%"
+                  ></div>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-4">
+                  <h3 class="text-xl font-semibold">ROI</h3>
+                  <span class="text-2xl text-purple-600">3.5x</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div
+                    class="bg-purple-600 h-2 rounded-full"
+                    style="width: 70%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl font-semibold mb-4">
+                ¿Listo para transformar tu negocio?
+              </h3>
+              <p class="text-gray-600 mb-6">
+                Contáctanos para una demostración personalizada de nuestro
+                sistema.
+              </p>
+              <button
+                class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-primary/90 cursor-pointer"
+              >
+                Solicitar Demo
+              </button>
+            </div>
+            <div class="flex justify-end space-x-6">
+              <a href="#" class="text-gray-600 hover:text-primary">
+                <i class="ri-github-fill text-2xl"></i>
+              </a>
+              <a href="#" class="text-gray-600 hover:text-primary">
+                <i class="ri-linkedin-box-fill text-2xl"></i>
+              </a>
+              <a href="#" class="text-gray-600 hover:text-primary">
+                <i class="ri-twitter-fill text-2xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    
+
+  </body>
+</html>
